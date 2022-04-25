@@ -26,16 +26,12 @@ class GeodesicLoss(nn.Module):
         reduction (string, optional): Specifies the reduction to apply to the output:
             ``'none'`` | ``'mean'`` | ``'sum'``. ``'none'``: no reduction will
             be applied, ``'mean'``: the weighted mean of the output is taken,
-            ``'sum'``: the output will be summed. Note: :attr:`size_average`
-            and :attr:`reduce` are in the process of being deprecated, and in
-            the meantime, specifying either of those two args will override
-            :attr:`reduction`. Default: ``'mean'``
+            ``'sum'``: the output will be summed. Default: ``'mean'``
 
     Shape:
-        - Input: :math:`(N, 3, 3)`.
-        - Target: :math:`(N, 3, 3)`.
-        - Output: scalar.
-          If :attr:`reduction` is ``'none'``, then :math:`(N)`.
+        - Input: Shape :math:`(N, 3, 3)`.
+        - Target: Shape :math:`(N, 3, 3)`.
+        - Output: If :attr:`reduction` is ``'none'``, then :math:`(N)`. Otherwise, scalar.
     """
 
     def __init__(self, eps: float = 1e-7, reduction: str = "mean") -> None:
