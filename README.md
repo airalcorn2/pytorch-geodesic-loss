@@ -1,6 +1,6 @@
 # PyTorch Geodesic Loss
 
-A PyTorch criterion for computing the distance between rotation matrices as described [here](http://www.boris-belousov.net/2016/12/01/quat-dist/#using-rotation-matrices) and [here](https://link.springer.com/article/10.1007/s10851-009-0161-2).
+A PyTorch criterion for computing the distance between rotation matrices (as described [here](http://www.boris-belousov.net/2016/12/01/quat-dist/#using-rotation-matrices) and [here](https://link.springer.com/article/10.1007/s10851-009-0161-2)).
 Specifically, the loss is calculated as:
 
 <p align="center">
